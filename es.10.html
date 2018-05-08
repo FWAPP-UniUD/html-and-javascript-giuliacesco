@@ -1,0 +1,51 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Esercizio 10</Es></title>
+        
+    </head>
+    <body>
+        <div>
+        <h1>Richiesta 10</h1> <br>
+        <input  type="checkbox" name= "richiesta" value="richiesta" id="richiesta" onclick="myFunction1()"/> Enable? <br>
+        </div>     
+        
+        <div>
+        <form> 
+        <fieldset>
+         <legend>Linguaggio Programazione</legend>
+        
+         <select name="siti" id="siti">
+          <option value="pascal" selected="selected">pascal  </option>
+          <option value="csharp">C#  </option>
+          <option value="c">C  </option>
+         </select>
+        </fieldset>
+         </form> 
+        </div>
+</body> 
+       
+      <!--  <script>
+            function myFunction1() {
+                  var x = document.getElementByName("richiesta");
+                  var y = document.getElementByName("siti");
+
+                 if((x=="") || (x="undefined")){
+                    alert("Il campo enable è obbligatorio.");
+                    /*non permettere di scegliere le opzioni*/
+                    document.getElementByName("siti").style.disabled= true;
+                 } 
+                }
+        </script>-->
+        <script>
+        function myFunction1() {
+            var x = document.getElementById("richiesta");
+            var y = document.getElementById("siti");
+            if (x.checked == true) {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        }
+        </script>
+</html>
